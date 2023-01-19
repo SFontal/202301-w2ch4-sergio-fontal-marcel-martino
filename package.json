@@ -2,6 +2,8 @@
   "name": "w2ch4",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
+  "main": "public/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
