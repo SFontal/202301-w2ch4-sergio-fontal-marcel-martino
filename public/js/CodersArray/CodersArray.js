@@ -1,21 +1,22 @@
 class CodersArray {
-  length;
-  constructor(...numbers) {
-    let propertyName = 0;
-    for (const number of numbers) {
-      this[propertyName] = number;
-      propertyName++;
-    }
-    this.setLength();
+  length = 0;
+  constructor(...values) {
+    this.push(...values);
   }
 
   setLength() {
-    let properties = this;
     let totalProperties = 0;
-    for (let property in properties) {
+    for (let property in this) {
       totalProperties++;
     }
-    this.length = totalProperties;
+    this.length = totalProperties - 1;
+  }
+
+  push(...values) {
+    for (const value of values) {
+      this[this.length] = value;
+      this.length++;
+    }
   }
 }
 
